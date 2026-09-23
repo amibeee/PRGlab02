@@ -1,10 +1,9 @@
-/* --------------------------- 
+/* ---------------------------
 Laboratoire : 02
 Auteur(s) : Nour El Islam Zarif
 Date : 23.09.2026
-But : Calcul du temps de trajet 
+But : Calcul du temps de trajet
 --------------------------- */
-
 
 #include <iostream>
 #include <cmath>
@@ -21,15 +20,14 @@ int main() {
     cin >> s1;
     cout << "la vitesse sur le terrain rocheux s2 (km/h) : ";
     cin >> s2;
-    cout << "la longueur du premier segment (km) : ";
+    cout << "la longueur du premier segment L1 (km) : ";
     cin >> L1;
 
-    L2 = sqrt(dx * dx + dy * dy);
+    L2 = sqrt(dx * dx + (dy - L1) * (dy - L1));
     t1 = L1 / s1;
     t2 = L2 / s2;
     t_total = t1 + t2;
 
-    cout << "Le temps total est : " << t_total << "h" << endl;
+    cout << "Le temps total est : " << t_total << " h" << endl;
     return EXIT_SUCCESS;
 }
-
