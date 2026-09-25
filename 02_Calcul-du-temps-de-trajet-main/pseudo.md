@@ -1,15 +1,33 @@
 # Pseudo code - Labo 02
 
-```
-dx = saisie("la distance dx (km) : ")
-dy = saisie("la distance dy (km) : ")
-s1 = saisie("la vitesse sur la route s1 (km/h) : ")
-s2 = saisie("la vitesse sur le terrain rocheux s2 (km/h) : ")
-L1 = saisie("la longueur du premier segment L1 (km) : ")
+## VERSION 1
 
-L2 = racine(dx puissance 2 + (dy - L1) puissance 2)
-t1 = L1 / s1
-t2 = L2 / s2
+```
+dx = 3
+dy = 10
+s1 = 5
+s2 = 2
+l1 = 6
+
+l2 = racine(dx puissance 2 + (dy - l1) puissance 2)
+t1 = l1 / s1
+t2 = l2 / s2
+t_total = t1 + t2
+ecrire(t_total)
+```
+
+## VERSION BONUS
+
+```
+dx = 3
+dy = 10
+s1 = 5
+s2 = 2
+l1 = saisie("la longueur du premier segment l1 (km) : ")
+
+l2 = racine(dx puissance 2 + (dy - l1) puissance 2)
+t1 = l1 / s1
+t2 = l2 / s2
 t_total = t1 + t2
 ecrire(t_total)
 ```

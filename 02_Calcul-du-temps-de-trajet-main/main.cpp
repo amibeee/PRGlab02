@@ -10,24 +10,18 @@ But : Calcul du temps de trajet
 using namespace std;
 
 int main() {
-    double dx, dy, s1, s2, L1, L2, t1, t2, t_total;
+    double dx = 3;   // km
+    double dy = 10;  // km
+    double s1 = 5;   // km/h (route)
+    double s2 = 2;   // km/h (terrain rocheux)
+    double l1 = 6;   // km (route)
+    double l2, t1, t2, t_total;
 
-    cout << "la distance dx (km) : ";
-    cin >> dx;
-    cout << "la distance dy (km) : ";
-    cin >> dy;
-    cout << "la vitesse sur la route s1 (km/h) : ";
-    cin >> s1;
-    cout << "la vitesse sur le terrain rocheux s2 (km/h) : ";
-    cin >> s2;
-    cout << "la longueur du premier segment L1 (km) : ";
-    cin >> L1;
-
-    L2 = sqrt(dx * dx + (dy - L1) * (dy - L1));
-    t1 = L1 / s1;
-    t2 = L2 / s2;
+    l2 = sqrt(dx * dx + (dy - l1) * (dy - l1));
+    t1 = l1 / s1;
+    t2 = l2 / s2;
     t_total = t1 + t2;
 
-    cout << "Le temps total est : " << t_total << " h" << endl;
+    cout << "le temps total est : " << t_total << " h" << endl;
     return EXIT_SUCCESS;
 }
