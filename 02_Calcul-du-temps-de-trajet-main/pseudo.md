@@ -23,11 +23,12 @@ dx = 3
 dy = 10
 s1 = 5
 s2 = 2
-l1 = saisie("la longueur du premier segment l1 (km) : ")
+l1 = dy - dx * s2 / racine(s1 puissance 2 - s2 puissance 2)
 
 l2 = racine(dx puissance 2 + (dy - l1) puissance 2)
 t1 = l1 / s1
 t2 = l2 / s2
 t_total = t1 + t2
+ecrire(l1)
 ecrire(t_total)
 ```
