@@ -2,7 +2,7 @@
 Laboratoire : 02
 Auteur(s) : Nour El Islam Zarif
 Date : 23.09.2026
-But : Calcul du temps de trajet avec l1 optimal
+But : Calcul du temps de trajet (version 1 + version bonus)
 --------------------------- */
 
 #include <iostream>
@@ -16,6 +16,17 @@ int main() {
     double s2 = 2;   // km/h (terrain rocheux)
     double l1, l2, t1, t2, t_total;
 
+    // VERSION 1
+    l1 = 6;
+
+    l2 = sqrt(dx * dx + (dy - l1) * (dy - l1));
+    t1 = l1 / s1;
+    t2 = l2 / s2;
+    t_total = t1 + t2;
+
+    cout << "version 1 - le temps total est : " << t_total << " h" << endl;
+
+    // VERSION BONUS
     l1 = dy - dx * s2 / sqrt(s1 * s1 - s2 * s2);
 
     l2 = sqrt(dx * dx + (dy - l1) * (dy - l1));
@@ -23,7 +34,8 @@ int main() {
     t2 = l2 / s2;
     t_total = t1 + t2;
 
-    cout << "le meilleur l1 est : " << l1 << " km" << endl;
-    cout << "le temps total est : " << t_total << " h" << endl;
+    cout << "version bonus - le meilleur l1 est : " << l1 << " km" << endl;
+    cout << "version bonus - le temps total est : " << t_total << " h" << endl;
+
     return EXIT_SUCCESS;
 }
