@@ -9,6 +9,7 @@ s1 = 5
 s2 = 2
 l1 = 6
 
+// calcul de l2 avec pythagore
 l2 = racine(dx puissance 2 + (dy - l1) puissance 2)
 t1 = l1 / s1
 t2 = l2 / s2

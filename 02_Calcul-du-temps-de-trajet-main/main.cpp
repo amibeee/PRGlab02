@@ -19,6 +19,7 @@ int main() {
     // VERSION 1
     l1 = 6;
 
+    // calcul de l2 avec pythagore
     l2 = sqrt(dx * dx + (dy - l1) * (dy - l1));
     t1 = l1 / s1;
     t2 = l2 / s2;
